@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10233f">
+  <title>MEDLOG | A Clinical Journal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" data-view="home"><span class="brand-mark">✚</span><span>MEDLOG</span></a>
+    <span class="top-note">A PERSONAL CLINICAL JOURNAL</span>
+  </header>
+
+  <main>
+    <section id="homeView" class="view active">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">A SPECIAL GIFT FOR A SPECIAL DOCTOR</p>
+          <h1>Every case tells<br><em>a story.</em></h1>
+          <p class="hero-text">A personal space to document, reflect, learn, and grow through every patient encounter.</p>
+          <div class="gift-note">
+            <span class="gift-heart">♡</span>
+            <div>
+              <strong>Welcome, Doctor.</strong>
+              <p>This journal was created especially for you. May every case strengthen your knowledge, every challenge build your confidence, and every patient remind you why your work matters.</p>
+              <small>With appreciation, always.</small>
+            </div>
+          </div>
+          <button class="btn btn-primary" data-action="new-case">＋ &nbsp; Document a new case</button>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="medical-card">
+            <div class="medical-cross">✚</div>
+            <span>MEDICAL EMERGENCY</span>
+            <strong>Clinical<br>Case Journal</strong>
+            <small>ASSESS · MANAGE · FOLLOW UP</small>
+          </div>
+          <div class="floating-chip chip-one">ABCDE</div>
+          <div class="floating-chip chip-two">GCS / 15</div>
+          <div class="floating-chip chip-three">♡ CARE</div>
+        </div>
+      </div>
+
+      <section class="quick-area">
+        <div class="section-heading">
+          <div><p class="eyebrow dark">YOUR WORKSPACE</p><h2>Clinical journal</h2></div>
+          <span class="secure-label"><span></span> Private workspace</span>
+        </div>
+        <div class="quick-grid">
+          <button class="quick-card" data-action="new-case">
+            <span class="quick-icon blue">＋</span><strong>New DLOC assessment</strong>
+            <small>Record a new presentation, initial findings and management.</small><span class="card-arrow">→</span>
+          </button>
+          <button class="quick-card" data-action="follow-up">
+            <span class="quick-icon mint">↻</span><strong>Record follow-up</strong>
+            <small>Document a reassessment using the original Case ID.</small><span class="card-arrow">→</span>
+          </button>
+          <button class="quick-card" data-action="outcome">
+            <span class="quick-icon violet">✓</span><strong>Record final outcome</strong>
+            <small>Complete the case with diagnosis and disposition.</small><span class="card-arrow">→</span>
+          </button>
+        </div>
+      </section>
+      <div class="notice"><strong>Clinical reminder</strong><span>This journal is an educational documentation aid, not a replacement for the official hospital record, clinical judgment, or emergency protocols. Never delay stabilization to complete it.</span></div>
+    </section>
+
+    <section id="formView" class="view">
+      <div class="form-header">
+        <button class="back-link" data-action="home">← Back to journal</button>
+        <p class="eyebrow dark">MEDICAL EMERGENCY DEPARTMENT</p>
+        <h1 id="formTitle">New DLOC assessment</h1>
+        <p id="formSubtitle">Initial assessment · Decreased Level of Consciousness</p>
+        <div class="progress-track"><div id="progressBar"></div></div>
+        <div class="progress-caption"><span id="stepLabel">Section 1</span><span id="progressPercent">0% complete</span></div>
+      </div>
+      <form id="caseForm" novalidate>
+        <div id="formSections"></div>
+        <div class="form-actions">
+          <button type="button" class="btn btn-secondary" id="prevBtn">Previous</button>
+          <button type="button" class="btn btn-primary" id="nextBtn">Continue →</button>
+          <button type="submit" class="btn btn-primary hidden" id="submitBtn">Submit record</button>
+        </div>
+      </form>
+      <p class="form-footnote">Please use a non-identifying Case ID. Do not enter patient names, phone numbers, hospital numbers, or other identifying information.</p>
+    </section>
+
+    <section id="successView" class="view success-view">
+      <div class="success-icon">✓</div>
+      <p class="eyebrow dark">RECORD SUBMITTED</p>
+      <h1>Thank you, Doctor.</h1>
+      <p id="successMessage">Your record has been sent. Please verify that it appears in the connected Google Sheet.</p>
+      <div class="success-actions">
+        <button class="btn btn-primary" data-action="new-case">＋ Record another case</button>
+        <button class="btn btn-secondary" data-action="home">Back to journal</button>
+      </div>
+      <p class="form-footnote">For follow-up entries, use exactly the same Case ID as the initial assessment.</p>
+    </section>
+  </main>
+
+  <footer><span>MEDLOG</span><span>Made with care · For clinical learning</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
