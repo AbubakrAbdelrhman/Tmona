@@ -3,8 +3,7 @@
   1) Deploy Code.gs as a Google Apps Script web app.
   2) Paste the deployment URL into GAS_WEB_APP_URL below.
   3) Publish this folder using GitHub Pages.
-*/
-const GAS_WEB_APP_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+*/const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyqKDzQyHc5CnGt693M93evSvoRz8PuiZLOypRVps3PLbBzG4cXjSjcootCOe41BPBj/exec";
 
 const formConfigs = {
   initial: {
